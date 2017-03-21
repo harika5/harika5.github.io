@@ -42,6 +42,12 @@ $( document ).ready(function() {
 	    choices: ["Pink", "Blue", "Burnt Orange", "Yellow"],
 	    correctAnswer: "Yellow",
 	    image: "<img src='assets/images/pacMan.png' class='img-circle shadow'>"
+	  },
+	  {
+	    question: "Which character from CD Projekt Red's popular series, The Witcher, is known as The Lady of Space and Time?",
+	    choices: ["Yennefer of Vengerberg", "Ciri", "Triss Merigold", "Keria Metz"],
+	    correctAnswer: "Ciri",
+	    image: "<img src='assets/images/ciri.jpg' class='img-circle shadow'>"
 	  }];
 	  
 
@@ -56,7 +62,7 @@ $( document ).ready(function() {
 		correctGuesses++;
 		var correctAnswer = questions[questionCounter].correctAnswer;
 		$("#gameScreen").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" + questions[questionCounter].image);
-		setTimeout(nextQuestion, 5000);
+		setTimeout(nextQuestion, 4000);
 		questionCounter++;
 	}
 
@@ -66,7 +72,7 @@ $( document ).ready(function() {
 		incorrectGuesses++;
 		var correctAnswer = questions[questionCounter].correctAnswer;
 		$("#gameScreen").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" + questions[questionCounter].image);
-		setTimeout(nextQuestion, 5000);
+		setTimeout(nextQuestion, 4000);
 		questionCounter++;
 	}
 
@@ -77,7 +83,7 @@ $( document ).ready(function() {
 			incorrectGuesses++;
 			var correctAnswer = questions[questionCounter].correctAnswer;
 			$("#gameScreen").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" + questions[questionCounter].image);
-			setTimeout(nextQuestion, 5000);
+			setTimeout(nextQuestion, 4000);
 			questionCounter++;
 		}
 	}
@@ -99,7 +105,7 @@ $( document ).ready(function() {
 	function timer() {
 		clock = setInterval(countDown, 1000);
 		function countDown() {
-			if (time <1) {
+			if (time < 1) {
 				clearInterval(clock);
 				userTimeout();
 			}
@@ -111,8 +117,8 @@ $( document ).ready(function() {
 	}
 
 	function nextQuestion() {
-		if (questionCounter < 5) {
-			time = 30;
+		if (questionCounter < 6) {
+			time = 15;
 			$("#gameScreen").html("<p>You have <span id='timer'><strong>" + time + "</strong></span> seconds left!</p>");
 			questionContent();
 			timer();
