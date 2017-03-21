@@ -83,7 +83,13 @@ $( document ).ready(function() {
 	}
 
 	function resultsScreen() {
-		$("#gameScreen").html("<p>Good work!</p>" + "<p>You got <strong>" + correctGuesses + "</strong> right.</p>" + "<p>You got <strong>" + incorrectGuesses + "</strong> wrong.</p>");
+		if (correctGuesses > incorrectGuesses) {
+			var endMessage = "Good work!";
+		}
+		else {
+			var endMessage = "Yikes, might want to try again...";
+		}
+		$("#gameScreen").html("<p>" + endMessage + "</p>" + "<p>You got <strong>" + correctGuesses + "</strong> right.</p>" + "<p>You got <strong>" + incorrectGuesses + "</strong> wrong.</p>");
 		$("#gameScreen").append("<h1 id='start'>Start Over?</h1>");
 		gameReset();
 		$("#start").click(nextQuestion);
