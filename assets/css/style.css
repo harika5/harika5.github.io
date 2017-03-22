@@ -1,10 +1,11 @@
 body { 
-  background: url(../images/pacmanBackground.jpg) no-repeat center center fixed; 
+  background: url(../images/pacmanBackground.jpg) no-repeat center center fixed;
+  background-color: black; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto', sans-serif;
   cursor: url(../images/controller.png), auto;
 }
 

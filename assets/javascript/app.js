@@ -1,11 +1,11 @@
 // A $( document ).ready() block.
 $( document ).ready(function() {
-    console.log( "ready!" );
+    // console.log( "ready!" );
 
     // track which question we are on
     var questionCounter = 0;
-    // initial time of 30 seconds for each question
-    var time = 30;
+    // initial time of 15 seconds for each question
+    var time = 15;
     // will keep tally of right guesses for end game
     var correctGuesses = 0;
     //will keep tally of wrong guesses for end game
@@ -48,12 +48,35 @@ $( document ).ready(function() {
 	    choices: ["Yennefer of Vengerberg", "Ciri", "Triss Merigold", "Keria Metz"],
 	    correctAnswer: "Ciri",
 	    image: "<img src='assets/images/ciri.jpg' class='img-circle shadow'>"
+	  },
+	  {
+	    question: "Spyro is a:",
+	    choices: ["Fighter Pilot", "Dragon", "Hedgehog", "Race Car"],
+	    correctAnswer: "Dragon",
+	    image: "<img src='assets/images/spyro.jpg' class='img-circle shadow'>"
+	  },
+	  {
+	    question: "I'm _____ and this is my favorite store on the Citadel:",
+	    choices: ["Master Chief", "Darth Revan", "Thor", "Commander Shepard"],
+	    correctAnswer: "Commander Shepard",
+	    image: "<img src='assets/images/shep.jpg' class='img-circle shadow'>"
 	  }];
 	  
 
-	// create question contents
+	// create question contents according to question count
 	function questionContent() {
-    	$("#gameScreen").append("<p class'questionHeader'><strong>" + questions[questionCounter].question + "</p><p class='choices'>" + questions[questionCounter].choices[0] + "</p><p class='choices'>" + questions[questionCounter].choices[1] + "</p><p class='choices'>" + questions[questionCounter].choices[2] + "</p><p class='choices'>" + questions[questionCounter].choices[3] + "</strong></p>");
+		// a for loop would be cool here...
+    	$("#gameScreen").append("<p class='questionHeader'><strong>" + 
+    		questions[questionCounter].question + 
+    		"</p><p class='choices'>" + 
+    		questions[questionCounter].choices[0] + 
+    		"</p><p class='choices'>" + 
+    		questions[questionCounter].choices[1] + 
+    		"</p><p class='choices'>" + 
+    		questions[questionCounter].choices[2] + 
+    		"</p><p class='choices'>" + 
+    		questions[questionCounter].choices[3] + 
+    		"</strong></p>");
 	}
 
 	// user guessed correctly
@@ -61,7 +84,10 @@ $( document ).ready(function() {
 		$("#gameScreen").html("<p>You got it right!</p>");
 		correctGuesses++;
 		var correctAnswer = questions[questionCounter].correctAnswer;
-		$("#gameScreen").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" + questions[questionCounter].image);
+		$("#gameScreen").append("<p>The answer was <span class='answer'><strong>" + 
+			correctAnswer + 
+			"</strong></span></p>" + 
+			questions[questionCounter].image);
 		setTimeout(nextQuestion, 4000);
 		questionCounter++;
 	}
@@ -71,7 +97,10 @@ $( document ).ready(function() {
 		$("#gameScreen").html("<p>Nope, that's not it!</p>");
 		incorrectGuesses++;
 		var correctAnswer = questions[questionCounter].correctAnswer;
-		$("#gameScreen").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" + questions[questionCounter].image);
+		$("#gameScreen").append("<p>The answer was <span class='answer'><strong>" + 
+			correctAnswer + 
+			"</strong></span></p>" + 
+			questions[questionCounter].image);
 		setTimeout(nextQuestion, 4000);
 		questionCounter++;
 	}
@@ -82,12 +111,16 @@ $( document ).ready(function() {
 			$("#gameScreen").html("<p>You ran out of time!</p>");
 			incorrectGuesses++;
 			var correctAnswer = questions[questionCounter].correctAnswer;
-			$("#gameScreen").append("<p>The answer was <span class='answer'><strong>" + correctAnswer + "</strong></span></p>" + questions[questionCounter].image);
+			$("#gameScreen").append("<p>The answer was <span class='answer'><strong>" + 
+				correctAnswer + 
+				"</strong></span></p>" + 
+				questions[questionCounter].image);
 			setTimeout(nextQuestion, 4000);
 			questionCounter++;
 		}
 	}
 
+	// screen that shows final score and nice message :)
 	function resultsScreen() {
 		if (correctGuesses > incorrectGuesses) {
 			var endMessage = "Good work!";
@@ -95,13 +128,15 @@ $( document ).ready(function() {
 		else {
 			var endMessage = "Yikes, might want to try again...";
 		}
-		$("#gameScreen").html("<p>" + endMessage + "</p>" + "<p>You got <strong>" + correctGuesses + "</strong> right.</p>" + "<p>You got <strong>" + incorrectGuesses + "</strong> wrong.</p>");
+		$("#gameScreen").html("<p>" + endMessage + "</p>" + "<p>You got <strong>" + 
+			correctGuesses + "</strong> right.</p>" + 
+			"<p>You got <strong>" + incorrectGuesses + "</strong> wrong.</p>");
 		$("#gameScreen").append("<h1 id='start'>Start Over?</h1>");
 		gameReset();
 		$("#start").click(nextQuestion);
 	}
 
-	// game clock
+	// game clock currently set to 15 seconds
 	function timer() {
 		clock = setInterval(countDown, 1000);
 		function countDown() {
@@ -116,8 +151,9 @@ $( document ).ready(function() {
 		}
 	}
 
+	// moves question counter forward to show next question
 	function nextQuestion() {
-		if (questionCounter < 6) {
+		if (questionCounter < questions.length) {
 			time = 15;
 			$("#gameScreen").html("<p>You have <span id='timer'><strong>" + time + "</strong></span> seconds left!</p>");
 			questionContent();
@@ -127,10 +163,11 @@ $( document ).ready(function() {
 		else {
 			resultsScreen();
 		}
-	console.log(questionCounter);
-	console.log(questions[questionCounter].correctAnswer);
+	// console.log(questionCounter);
+	// console.log(questions[questionCounter].correctAnswer);
 	}
 
+	// reset score and counter parameters on restart
 	function gameReset() {
 		questionCounter = 0;
 		correctGuesses = 0;
