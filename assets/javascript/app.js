@@ -77,6 +77,30 @@ $(document).ready(function() {
 	    choices: ["Dragon Quest VIII", "Final Fantsay XIII", "The Last of Us", "Dragon Age: Origins"],
 	    correctAnswer: "The Last of Us",
 	    image: "<img src='assets/images/lastOfUs.jpg' class='img-circle shadow'>"
+	  },
+	  {
+	    question: "In which game can you find tears, vigors and robotic patriots?",
+	    choices: ["Bioshock: Infinite", "Modern Warfare", "Wolfenstein", "Civilization IV"],
+	    correctAnswer: "Bioshock: Infinite",
+	    image: "<img src='assets/images/bioshock.jpg' class='img-circle shadow'>"
+	  },
+	  {
+	    question: "Who developed the Mass Effect series? ",
+	    choices: ["Bethesda", "Bioware", "Ubisoft", "2K Games"],
+	    correctAnswer: "Bioware",
+	    image: "<img src='assets/images/bioware.jpg' class='img-circle shadow'>"
+	  },
+	  {
+	    question: "Inhabitants of which fictional town find themselves under the influence of the doctrines of The Order?",
+	    choices: ["Raccoon City", "Silent Hill", "Bright Falls", "Rapture"],
+	    correctAnswer: "Silent Hill",
+	    image: "<img src='assets/images/silentHill.jpg' class='img-circle shadow'>"
+	  },
+	  {
+	    question: "Which of these characters can't jump in any of their games?",
+	    choices: ["Link", "Agent 47", "Pac Man", "James Bond"],
+	    correctAnswer: "Agent 47",
+	    image: "<img src='assets/images/hitman.jpg' class='img-circle shadow'>"
 	  }];
 	  
 
@@ -139,7 +163,10 @@ $(document).ready(function() {
 
 	// screen that shows final score and nice message :)
 	function resultsScreen() {
-		if (correctGuesses > incorrectGuesses) {
+		if (correctGuesses === questions.length) {
+			var endMessage = "Woah, get a life bud...";
+		}
+		else if (correctGuesses > incorrectGuesses) {
 			var endMessage = "Good work!";
 		}
 		else {
