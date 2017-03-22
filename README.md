@@ -8,8 +8,8 @@ Simply hit START to begin the game.
 
 ## Built With
 
-* [Jquery](http://www.dropwizard.io/1.0.2/docs/) - JQuery
-* [Javascript](https://maven.apache.org/) - Javascript
+* [Jquery](https://jquery.com/) - JQuery
+* [Javascript](https://www.javascript.com/) - Javascript
 
 ## Author
 
