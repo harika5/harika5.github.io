@@ -164,18 +164,22 @@ $(document).ready(function() {
 	// screen that shows final score and nice message :)
 	function resultsScreen() {
 		if (correctGuesses === questions.length) {
-			var endMessage = "Woah, get a life bud...";
+			var endMessage = "Perfection! Might want to go outside more tho";
+			var bottomText = "#nerdalert!";
 		}
 		else if (correctGuesses > incorrectGuesses) {
-			var endMessage = "Good work!";
+			var endMessage = "Good work! But do better you can...";
+			var bottomText = "all your base are belong to us";
 		}
 		else {
-			var endMessage = "Yikes, might want to try again...";
+			var endMessage = "You seem to have taken an arrow to the knee";
+			var bottomText = "#scrub";
 		}
 		$("#gameScreen").html("<p>" + endMessage + "</p>" + "<p>You got <strong>" + 
 			correctGuesses + "</strong> right.</p>" + 
 			"<p>You got <strong>" + incorrectGuesses + "</strong> wrong.</p>");
 		$("#gameScreen").append("<h1 id='start'>Start Over?</h1>");
+		$("#bottomText").html(bottomText);
 		gameReset();
 		$("#start").click(nextQuestion);
 	}
