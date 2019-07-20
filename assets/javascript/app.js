@@ -13,10 +13,10 @@ $(document).ready(function() {
     // question & answer array
     var questions = [
       {
-	    question: "Who is the main character of Uncharted?",
-	    choices: ["Nathan Drake", "Aloy", "Master Chief", "Mario"],
-	    correctAnswer: "Nathan Drake",
-	    image: "<img src='assets/images/nathanDrake.jpg' class='img-circle shadow'>"
+	    question: "Who was inventor of the programming language COBOL?",
+	    choices: ["Grace Hopper", "Ada Lovelace", "Karen Jones", "Lynn Conway"],
+	    correctAnswer: "Grace Hopper",
+	    image: "<img src='assets/images/grace_hopper.jpeg' class='img-circle shadow'>"
 	  }, 
 	  {
 	    question: "What is the name of the fictional English archaeologist in the game Tomb Raider?",
