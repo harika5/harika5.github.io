@@ -16,7 +16,7 @@ $(document).ready(function() {
 	    question: "Who was inventor of the programming language COBOL?",
 	    choices: ["Grace Hopper", "Ada Lovelace", "Karen Jones", "Lynn Conway"],
 	    correctAnswer: "Grace Hopper",
-	    image: "<img src='assets/images/grace_hopper.jpeg' class='img-circle shadow'>"
+	    image: "<img src='assets/images/grace_hopper.jfif' class='img-circle shadow'>"
 	  }, 
 	  {
 	    question: "What is the name of the fictional English archaeologist in the game Tomb Raider?",
