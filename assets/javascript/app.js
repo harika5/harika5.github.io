@@ -19,88 +19,28 @@ $(document).ready(function() {
 	    image: "<img src='assets/images/grace_hopper.jfif' class='img-circle shadow'>"
 	  }, 
 	  {
-	    question: "What is the name of the fictional English archaeologist in the game Tomb Raider?",
-	    choices: ["Cortana", "Lara Croft", "Faith", "Kitana"],
-	    correctAnswer: "Lara Croft",
-	    image: "<img src='assets/images/laraCroft.jpg' class='img-circle shadow'>"
+	    question: "Grace Hopper is known for accomplishments in Computer Science and _______________?",
+	    choices: ["Signing", "Painting", "Naval Rank", "Ballet"],
+	    correctAnswer: "Naval Rank",
+	    image: "<img src='assets/images/gc2.jfif' class='img-circle shadow'>"
 	  }, 
 	  {
-	    question: "Black Ops is the subtitle of which game?",
-	    choices: ["Call of Duty", "Battlefield", "Operation:", "Sims 4"],
+	    question: "Hopper is also know as?",
+	    choices: ["First female in STEM", "Inventor of Computer Science", "Founder of computer", "Amazing Grace"],
 	    correctAnswer: "Call of Duty",
-	    image: "<img src='assets/images/blackOps.jpg' class='img-circle shadow'>"
+	    image: "<img src='assets/images/gc3.jfif' class='img-circle shadow'>"
 	  }, 
 	  {
-	    question: "Pikachu is one of the species of creatures in which series of games?",
-	    choices: ["Digimon", "Space Invaders", "Rick & Morty", "Pokemon"],
-	    correctAnswer: "Pokemon",
-	    image: "<img src='assets/images/pikachu.jpg' class='img-circle shadow'>"
+	    question: "Hopper is credited with popularizing the term ________________?",
+	    choices: ["Computers", "Debugging", "Feminism", "Compilers"],
+	    correctAnswer: "Debugging",
+	    image: "<img src='assets/images/gc4.jpg' class='img-circle shadow'>"
 	  }, 
 	  {
-	    question: "What color is Pac-Man?",
-	    choices: ["Pink", "Blue", "Burnt Orange", "Yellow"],
-	    correctAnswer: "Yellow",
-	    image: "<img src='assets/images/pacMan.png' class='img-circle shadow'>"
-	  },
-	  {
-	    question: "Which character from CD Projekt Red's popular series, The Witcher, is known as The Lady of Space and Time?",
-	    choices: ["Yennefer of Vengerberg", "Ciri", "Triss Merigold", "Keria Metz"],
-	    correctAnswer: "Ciri",
-	    image: "<img src='assets/images/ciri.jpg' class='img-circle shadow'>"
-	  },
-	  {
-	    question: "Spyro is a:",
-	    choices: ["Fighter Pilot", "Dragon", "Hedgehog", "Race Car"],
-	    correctAnswer: "Dragon",
-	    image: "<img src='assets/images/spyro.jpg' class='img-circle shadow'>"
-	  },
-	  {
-	    question: "I'm _____ and this is my favorite store on the Citadel:",
-	    choices: ["Master Chief", "Darth Revan", "Thor", "Commander Shepard"],
-	    correctAnswer: "Commander Shepard",
-	    image: "<img src='assets/images/shep.jpg' class='img-circle shadow'>"
-	  },
-	  {
-	    question: "Who is the protagonist of Nintendo's franchise often set in the Kingdom of Hyrule?",
-	    choices: ["Zelda", "Mario", "Donkey Kong", "Link"],
-	    correctAnswer: "Link",
-	    image: "<img src='assets/images/link.png' class='img-circle shadow'>"
-	  },
-	  {
-	    question: "Which game is most likely to never come out?",
-	    choices: ["Half Life 3", "Half Life 3", "Half Life 3", "Half Life 3"],
-	    correctAnswer: "Half Life 3",
-	    image: "<img src='assets/images/halfLife.jpg' class='img-circle shadow'>"
-	  },
-	  {
-	    question: "Joel and Ellie are two companions in what video game?",
-	    choices: ["Dragon Quest VIII", "Final Fantsay XIII", "The Last of Us", "Dragon Age: Origins"],
-	    correctAnswer: "The Last of Us",
-	    image: "<img src='assets/images/lastOfUs.jpg' class='img-circle shadow'>"
-	  },
-	  {
-	    question: "In which game can you find tears, vigors and robotic patriots?",
-	    choices: ["Bioshock: Infinite", "Modern Warfare", "Wolfenstein", "Civilization IV"],
-	    correctAnswer: "Bioshock: Infinite",
-	    image: "<img src='assets/images/bioshock.jpg' class='img-circle shadow'>"
-	  },
-	  {
-	    question: "Who developed the Mass Effect series? ",
-	    choices: ["Bethesda", "Bioware", "Ubisoft", "2K Games"],
-	    correctAnswer: "Bioware",
-	    image: "<img src='assets/images/bioware.jpg' class='img-circle shadow'>"
-	  },
-	  {
-	    question: "Inhabitants of which fictional town find themselves under the influence of the doctrines of The Order?",
-	    choices: ["Raccoon City", "Silent Hill", "Bright Falls", "Rapture"],
-	    correctAnswer: "Silent Hill",
-	    image: "<img src='assets/images/silentHill.jpg' class='img-circle shadow'>"
-	  },
-	  {
-	    question: "Which of these characters can't jump in any of their games?",
-	    choices: ["Link", "Agent 47", "Pac Man", "James Bond"],
-	    correctAnswer: "Agent 47",
-	    image: "<img src='assets/images/hitman.jpg' class='img-circle shadow'>"
+	    question: "Is the U.S. Navy Destroyer USS Hopper is Named After Ms. Hopper?",
+	    choices: ["True", "False", "Both of the above", "None of the above"],
+	    correctAnswer: "True",
+	    image: "<img src='assets/images/gc5.png' class='img-circle shadow'>"
 	  }];
 	  
 
