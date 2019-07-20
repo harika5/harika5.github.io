@@ -1,6 +1,6 @@
-# Video Game Trivia
+# Grace Hopper Trivia Game
 
-A project for UNCC Coding bootcamp. This simple trivia has a library of questions and answers themed around video games. Enjoy!
+This simple trivia has a library of questions and answers themed around Grace Hopper. Enjoy!
 
 ## Getting Started
 
@@ -11,11 +11,5 @@ Simply hit START to begin the game.
 * [Jquery](https://jquery.com/) - JQuery
 * [Javascript](https://www.javascript.com/) - Javascript
 
-## Author
 
-* **Robbie Geyer** - *Initial work* - [dacanesrock](https://github.com/dacanesrock)
-
-## Acknowledgments
-
-* Google-Fu
 
