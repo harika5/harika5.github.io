@@ -27,7 +27,7 @@ $(document).ready(function() {
 	  {
 	    question: "Hopper is also know as?",
 	    choices: ["First female in STEM", "Inventor of Computer Science", "Founder of computer", "Amazing Grace"],
-	    correctAnswer: "Call of Duty",
+	    correctAnswer: "Amazing Grace",
 	    image: "<img src='assets/images/gc3.jfif' class='img-circle shadow'>"
 	  }, 
 	  {
